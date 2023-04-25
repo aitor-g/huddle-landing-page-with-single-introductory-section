@@ -1,1 +1,3 @@
-# huddle-landing-page-with-single-introductory-section
+# Huddle Landing Page with Single Introductory Section
+
+A pretty basic landing page made just in one section

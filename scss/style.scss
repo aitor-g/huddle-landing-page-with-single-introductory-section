@@ -194,6 +194,11 @@ body {
       background-color: $white;
       border-radius: 2rem;
       text-shadow: 1px 1px 1px rgba($black, 0.3);
+
+      &:hover {
+        color: $white;
+        background-color: $magenta;
+      }
     }
   }
 }
@@ -204,10 +209,28 @@ body {
   &__sm {
     display: flex;
 
-    &-facebook {}
+    &-facebook {
+      &:hover {
+        border-color: $magenta;
 
-    &-twitter {}
+        i {
+          color: $magenta;
+        }
+      }
+    }
 
-    &-instagram {}
+    &-twitter {
+      &:hover {
+        color: $magenta;
+        border-color: $magenta;
+      }
+    }
+
+    &-instagram {
+      &:hover {
+        color: $magenta;
+        border-color: $magenta;
+      }
+    }
   }
 }

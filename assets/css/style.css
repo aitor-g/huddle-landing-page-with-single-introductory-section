@@ -188,12 +188,30 @@ body {
   border-radius: 2rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+.main__info-button:hover {
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(300, 69%, 71%);
+}
 
 .footer {
   display: flex;
 }
 .footer__sm {
   display: flex;
+}
+.footer__sm-facebook:hover {
+  border-color: hsl(300, 69%, 71%);
+}
+.footer__sm-facebook:hover i {
+  color: hsl(300, 69%, 71%);
+}
+.footer__sm-twitter:hover {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
+}
+.footer__sm-instagram:hover {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
 }
 
 /*# sourceMappingURL=style.css.map */
