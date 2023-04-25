@@ -169,25 +169,12 @@ body {
 
 
 // GENERAL STYLES
-.header {
-  &__logo {
-    &-img {}
-  }
-}
-
 .main {
-  &__mockup {
-    &-img {}
-  }
-
   &__info {
-
     &-title {
       font-weight: $semi;
       font-family: $pop;
     }
-
-    &-description {}
 
     &-button {
       color: $violet;
