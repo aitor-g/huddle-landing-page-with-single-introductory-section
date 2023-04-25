@@ -1,0 +1,213 @@
+@use '../scss' as *;
+
+// RESETS
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $white;
+  text-decoration: none;
+}
+
+// BODY STYLES
+body {
+  @include onDesktop {
+    background-image: url('/assets/img/bg-desktop.svg');
+    padding: 3rem 5rem;
+  }
+
+  @include onMobile {
+    background-image: url('/assets/img/bg-mobile.svg');
+    padding: 2rem 2rem;
+  }
+
+  background-color: $violet;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family:$open;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// DESKTOP ONLY STYLES
+@include onDesktop {
+  .header {
+    margin-bottom: 5.5rem;
+
+    &__logo {
+      &-img {
+        height: 50px;
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+
+    &__mockup {
+      &-img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+      margin-left: 3rem;
+      width: 50%;
+
+      &-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &-description {
+        font-size: 1.15rem;
+        line-height: 1.8rem;
+        margin-bottom: 2.5rem;
+      }
+
+      &-button {
+        padding: 1rem 4rem;
+        box-shadow: 5px 5px 5px 5px rgba($black, 0.12);
+      }
+    }
+  }
+
+  .footer {
+    justify-content: flex-end;
+    margin-top: 2rem;
+
+    &__sm {
+      font-size: 1.2rem;
+
+      &-facebook {
+        @include styleIconDesktop;
+      }
+
+      &-twitter {
+        @include styleIconDesktop;
+      }
+
+      &-instagram {
+        @include styleIconDesktop;
+      }
+    }
+  }
+}
+
+
+// MOBILE ONLY STYLES
+@include onMobile {
+
+  .header {
+    &__logo {
+      &-img {
+        height: 28px;
+      }
+    }
+  }
+
+  .main {
+    text-align: center;
+    @include colCenter;
+
+    &__mockup {
+      margin: 0 0 3.5rem 0;
+
+      &-img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+
+      &-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      &-description {
+        font-size: 1rem;
+        line-height: 1.7rem;
+        margin-bottom: 1.5rem;
+        font-weight: $reg;
+      }
+
+      &-button {
+        font-size: 0.75rem;
+        padding: 0.75rem 5rem;
+        box-shadow: 2px 2px 2px 2px rgba($black, 0.12);
+      }
+    }
+  }
+
+  .footer {
+    justify-content: center;
+    padding-bottom: 0.5rem;
+
+    &__sm {
+      &-facebook {
+        @include styleIconMobile;
+      }
+
+      &-twitter {
+        @include styleIconMobile;
+      }
+
+      &-instagram {
+        @include styleIconMobile;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+// GENERAL STYLES
+.header {
+  &__logo {
+    &-img {}
+  }
+}
+
+.main {
+  &__mockup {
+    &-img {}
+  }
+
+  &__info {
+
+    &-title {
+      font-weight: $semi;
+      font-family: $pop;
+    }
+
+    &-description {}
+
+    &-button {
+      color: $violet;
+      background-color: $white;
+      border-radius: 2rem;
+      text-shadow: 1px 1px 1px rgba($black, 0.3);
+    }
+  }
+}
+
+.footer {
+  display: flex;
+
+  &__sm {
+    display: flex;
+
+    &-facebook {}
+
+    &-twitter {}
+
+    &-instagram {}
+  }
+}
